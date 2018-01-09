@@ -150,7 +150,7 @@ $(document).ready(function () {
 <li>If the number of values is small, keyboard entry can be efficient.</li>
 <li>R has a number of functions for quickly generating patterned data.</li>
 </ol>
-<p>For large amouts of data, however, keyboard enyry is likely to be inefficient and error-prone.</p>
+<p>For large amouts of data, however, keyboard entry is likely to be inefficient and error-prone.</p>
 <pre class="r"><code>x &lt;- c(1, 2, 3, 4)
 names &lt;- c(&quot;John&quot;, &quot;Sandy&quot;, &quot;Mary&quot;)
 v &lt;- c(TRUE, FALSE)</code></pre>
@@ -164,35 +164,35 @@ sex &lt;- rep(rep(c(&quot;male&quot;, &quot;female&quot;), c(5, 5)), 2)
 sex
 Guyer &lt;- data.frame(cooperation, condition, sex)
 Guyer</code></pre>
-<pre><code>##  [1] 49 64 37 52 68 54 61 79 64 29 27 58 52 41 30 40 39 44 34 44</code></pre>
-<pre><code>##  [1] &quot;public&quot;    &quot;public&quot;    &quot;public&quot;    &quot;public&quot;    &quot;public&quot;   
-##  [6] &quot;public&quot;    &quot;public&quot;    &quot;public&quot;    &quot;public&quot;    &quot;public&quot;   
-## [11] &quot;anonymous&quot; &quot;anonymous&quot; &quot;anonymous&quot; &quot;anonymous&quot; &quot;anonymous&quot;
-## [16] &quot;anonymous&quot; &quot;anonymous&quot; &quot;anonymous&quot; &quot;anonymous&quot; &quot;anonymous&quot;</code></pre>
-<pre><code>##  [1] &quot;male&quot;   &quot;male&quot;   &quot;male&quot;   &quot;male&quot;   &quot;male&quot;   &quot;female&quot; &quot;female&quot;
-##  [8] &quot;female&quot; &quot;female&quot; &quot;female&quot; &quot;male&quot;   &quot;male&quot;   &quot;male&quot;   &quot;male&quot;  
-## [15] &quot;male&quot;   &quot;female&quot; &quot;female&quot; &quot;female&quot; &quot;female&quot; &quot;female&quot;</code></pre>
-<pre><code>##    cooperation condition    sex
-## 1           49    public   male
-## 2           64    public   male
-## 3           37    public   male
-## 4           52    public   male
-## 5           68    public   male
-## 6           54    public female
-## 7           61    public female
-## 8           79    public female
-## 9           64    public female
-## 10          29    public female
-## 11          27 anonymous   male
-## 12          58 anonymous   male
-## 13          52 anonymous   male
-## 14          41 anonymous   male
-## 15          30 anonymous   male
-## 16          40 anonymous female
-## 17          39 anonymous female
-## 18          44 anonymous female
-## 19          34 anonymous female
-## 20          44 anonymous female</code></pre>
+<pre><code>&gt;  [1] 49 64 37 52 68 54 61 79 64 29 27 58 52 41 30 40 39 44 34 44</code></pre>
+<pre><code>&gt;  [1] &quot;public&quot;    &quot;public&quot;    &quot;public&quot;    &quot;public&quot;    &quot;public&quot;   
+&gt;  [6] &quot;public&quot;    &quot;public&quot;    &quot;public&quot;    &quot;public&quot;    &quot;public&quot;   
+&gt; [11] &quot;anonymous&quot; &quot;anonymous&quot; &quot;anonymous&quot; &quot;anonymous&quot; &quot;anonymous&quot;
+&gt; [16] &quot;anonymous&quot; &quot;anonymous&quot; &quot;anonymous&quot; &quot;anonymous&quot; &quot;anonymous&quot;</code></pre>
+<pre><code>&gt;  [1] &quot;male&quot;   &quot;male&quot;   &quot;male&quot;   &quot;male&quot;   &quot;male&quot;   &quot;female&quot; &quot;female&quot;
+&gt;  [8] &quot;female&quot; &quot;female&quot; &quot;female&quot; &quot;male&quot;   &quot;male&quot;   &quot;male&quot;   &quot;male&quot;  
+&gt; [15] &quot;male&quot;   &quot;female&quot; &quot;female&quot; &quot;female&quot; &quot;female&quot; &quot;female&quot;</code></pre>
+<pre><code>&gt;    cooperation condition    sex
+&gt; 1           49    public   male
+&gt; 2           64    public   male
+&gt; 3           37    public   male
+&gt; 4           52    public   male
+&gt; 5           68    public   male
+&gt; 6           54    public female
+&gt; 7           61    public female
+&gt; 8           79    public female
+&gt; 9           64    public female
+&gt; 10          29    public female
+&gt; 11          27 anonymous   male
+&gt; 12          58 anonymous   male
+&gt; 13          52 anonymous   male
+&gt; 14          41 anonymous   male
+&gt; 15          30 anonymous   male
+&gt; 16          40 anonymous female
+&gt; 17          39 anonymous female
+&gt; 18          44 anonymous female
+&gt; 19          34 anonymous female
+&gt; 20          44 anonymous female</code></pre>
 <p><br></p>
 </div>
 <div id="scan" class="section level3">
@@ -232,16 +232,16 @@ Prestige &lt;- read.table(&quot;https://socialsciences.mcmaster.ca/jfox/Books/Co
 <p><br></p>
 <p>There are errors when loading the data and the error message as follows. Then we have to find out the rows without 7 elements.</p>
 <pre class="r"><code>Prestige &lt;- read.table(&quot;Prestige-bugged.txt&quot;, header = TRUE)</code></pre>
-<pre><code>## Error in scan(file = file, what = what, sep = sep, quote = quote, dec = dec, : line 34 did not have 7 elements</code></pre>
+<pre><code>&gt; Error in scan(file = file, what = what, sep = sep, quote = quote, dec = dec, : line 34 did not have 7 elements</code></pre>
 <p>Use <code>count.fields()</code> to detect the counts of elements in each row.</p>
 <pre class="r"><code>file &lt;- &quot;Prestige-bugged.txt&quot;
 counts &lt;- count.fields(file)
 counts</code></pre>
-<pre><code>##   [1] 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 6
-##  [36] 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 6 7 7 7 7 7 7 7 7 7 6 7 7 7 6 7 7
-##  [71] 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7</code></pre>
+<pre><code>&gt;   [1] 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 6
+&gt;  [36] 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 6 7 7 7 7 7 7 7 7 7 6 7 7 7 6 7 7
+&gt;  [71] 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7</code></pre>
 <pre class="r"><code>which(counts != 7)  # print the index of counts not equal to 7</code></pre>
-<pre><code>## [1] 35 54 64 68</code></pre>
+<pre><code>&gt; [1] 35 54 64 68</code></pre>
 <p>Then we can fix the rows with problems.</p>
 <p><br></p>
 </div>
@@ -274,17 +274,17 @@ counts</code></pre>
     &quot;income&quot;, &quot;women&quot;, &quot;prestige&quot;, &quot;census&quot;, &quot;type&quot;), row.names = &quot;occupation&quot;, 
     widths = c(25, 5, 5, 5, 4, 4, 4))
 Prestige[1:10, ]</code></pre>
-<pre><code>##                           education income women prestige census type
-## GOV.ADMINISTRATORS            13.11  12351 11.16     68.8   1113 prof
-## GENERAL.MANAGERS              12.26  25879  4.02     69.1   1130 prof
-## ACCOUNTANTS                   12.77   9271 15.70     63.4   1171 prof
-## PURCHASING.OFFICERS           11.42   8865  9.11     56.8   1175 prof
-## CHEMISTS                      14.62   8403 11.68     73.5   2111 prof
-## PHYSICISTS                    15.64  11030  5.13     77.6   2113 prof
-## BIOLOGISTS                    15.09   8258 25.65     72.6   2133 prof
-## ARCHITECTS                    15.44  14163  2.69     78.1   2141 prof
-## CIVIL.ENGINEERS               14.52  11377  1.03     73.1   2143 prof
-## MINING.ENGINEERS              14.64  11023  0.94     68.8   2153 prof</code></pre>
+<pre><code>&gt;                           education income women prestige census type
+&gt; GOV.ADMINISTRATORS            13.11  12351 11.16     68.8   1113 prof
+&gt; GENERAL.MANAGERS              12.26  25879  4.02     69.1   1130 prof
+&gt; ACCOUNTANTS                   12.77   9271 15.70     63.4   1171 prof
+&gt; PURCHASING.OFFICERS           11.42   8865  9.11     56.8   1175 prof
+&gt; CHEMISTS                      14.62   8403 11.68     73.5   2111 prof
+&gt; PHYSICISTS                    15.64  11030  5.13     77.6   2113 prof
+&gt; BIOLOGISTS                    15.09   8258 25.65     72.6   2133 prof
+&gt; ARCHITECTS                    15.44  14163  2.69     78.1   2141 prof
+&gt; CIVIL.ENGINEERS               14.52  11377  1.03     73.1   2143 prof
+&gt; MINING.ENGINEERS              14.64  11023  0.94     68.8   2153 prof</code></pre>
 <p><br></p>
 </div>
 <div id="built-in-datasets" class="section level3">
@@ -292,13 +292,13 @@ Prestige[1:10, ]</code></pre>
 <pre class="r"><code>data(Prestige, package = &quot;car&quot;)
 head(Prestige)  # first 6 rows
 remove(Prestige)</code></pre>
-<pre><code>##                     education income women prestige census type
-## gov.administrators      13.11  12351 11.16     68.8   1113 prof
-## general.managers        12.26  25879  4.02     69.1   1130 prof
-## accountants             12.77   9271 15.70     63.4   1171 prof
-## purchasing.officers     11.42   8865  9.11     56.8   1175 prof
-## chemists                14.62   8403 11.68     73.5   2111 prof
-## physicists              15.64  11030  5.13     77.6   2113 prof</code></pre>
+<pre><code>&gt;                     education income women prestige census type
+&gt; gov.administrators      13.11  12351 11.16     68.8   1113 prof
+&gt; general.managers        12.26  25879  4.02     69.1   1130 prof
+&gt; accountants             12.77   9271 15.70     63.4   1171 prof
+&gt; purchasing.officers     11.42   8865  9.11     56.8   1175 prof
+&gt; chemists                14.62   8403 11.68     73.5   2111 prof
+&gt; physicists              15.64  11030  5.13     77.6   2113 prof</code></pre>
 <p><br></p>
 </div>
 <div id="to-use-r-dataset-youve-already-saved" class="section level3">
@@ -360,46 +360,46 @@ head(Freedman$density, 20)  # first 20 values
 mean(Freedman$density)
 mean(Freedman$density, na.rm = TRUE)  # na.rm means NA-remove
 median(Freedman$density, na.rm = TRUE)</code></pre>
-<pre><code>##  [1]  746  322   NA  491 1612  770   41  877  240  147  272 1831 1252  832
-## [15]  630   NA   NA  328  308 1832</code></pre>
-<pre><code>## [1] NA</code></pre>
-<pre><code>## [1] 765.67</code></pre>
-<pre><code>## [1] 412</code></pre>
+<pre><code>&gt;  [1]  746  322   NA  491 1612  770   41  877  240  147  272 1831 1252  832
+&gt; [15]  630   NA   NA  328  308 1832</code></pre>
+<pre><code>&gt; [1] NA</code></pre>
+<pre><code>&gt; [1] 765.67</code></pre>
+<pre><code>&gt; [1] 412</code></pre>
 <p><br></p>
 <p>We can remove the data points with missing values (NA values):</p>
 <pre class="r"><code>head(Freedman, 7)  # first 7 values</code></pre>
-<pre><code>##             population nonwhite density crime
-## Akron              675      7.3     746  2602
-## Albany             713      2.6     322  1388
-## Albuquerque         NA      3.3      NA  5018
-## Allentown          534      0.8     491  1182
-## Anaheim           1261      1.4    1612  3341
-## Atlanta           1330     22.8     770  2805
-## Bakersfield        331      7.0      41  3306</code></pre>
+<pre><code>&gt;             population nonwhite density crime
+&gt; Akron              675      7.3     746  2602
+&gt; Albany             713      2.6     322  1388
+&gt; Albuquerque         NA      3.3      NA  5018
+&gt; Allentown          534      0.8     491  1182
+&gt; Anaheim           1261      1.4    1612  3341
+&gt; Atlanta           1330     22.8     770  2805
+&gt; Bakersfield        331      7.0      41  3306</code></pre>
 <pre class="r"><code>Freedman.good &lt;- na.omit(Freedman)
 head(Freedman.good)</code></pre>
-<pre><code>##             population nonwhite density crime
-## Akron              675      7.3     746  2602
-## Albany             713      2.6     322  1388
-## Allentown          534      0.8     491  1182
-## Anaheim           1261      1.4    1612  3341
-## Atlanta           1330     22.8     770  2805
-## Bakersfield        331      7.0      41  3306</code></pre>
+<pre><code>&gt;             population nonwhite density crime
+&gt; Akron              675      7.3     746  2602
+&gt; Albany             713      2.6     322  1388
+&gt; Allentown          534      0.8     491  1182
+&gt; Anaheim           1261      1.4    1612  3341
+&gt; Atlanta           1330     22.8     770  2805
+&gt; Bakersfield        331      7.0      41  3306</code></pre>
 <p><br></p>
 <p>Also, <code>is.na()</code> function determine the missing values for you.</p>
 <pre class="r"><code>is.na(c(1, 2, NA, 4))</code></pre>
-<pre><code>## [1] FALSE FALSE  TRUE FALSE</code></pre>
+<pre><code>&gt; [1] FALSE FALSE  TRUE FALSE</code></pre>
 <p>When you implement it to the whole dataset, it can also tell you the amount of missing values in the whole dataset.</p>
 <pre class="r"><code>head(is.na(Freedman))
 sum(is.na(Freedman))</code></pre>
-<pre><code>##             population nonwhite density crime
-## Akron            FALSE    FALSE   FALSE FALSE
-## Albany           FALSE    FALSE   FALSE FALSE
-## Albuquerque       TRUE    FALSE    TRUE FALSE
-## Allentown        FALSE    FALSE   FALSE FALSE
-## Anaheim          FALSE    FALSE   FALSE FALSE
-## Atlanta          FALSE    FALSE   FALSE FALSE</code></pre>
-<pre><code>## [1] 20</code></pre>
+<pre><code>&gt;             population nonwhite density crime
+&gt; Akron            FALSE    FALSE   FALSE FALSE
+&gt; Albany           FALSE    FALSE   FALSE FALSE
+&gt; Albuquerque       TRUE    FALSE    TRUE FALSE
+&gt; Allentown        FALSE    FALSE   FALSE FALSE
+&gt; Anaheim          FALSE    FALSE   FALSE FALSE
+&gt; Atlanta          FALSE    FALSE   FALSE FALSE</code></pre>
+<pre><code>&gt; [1] 20</code></pre>
 <p><br></p>
 </div>
 <div id="numeric-variables-and-factors" class="section level3">
@@ -409,28 +409,28 @@ sum(is.na(Freedman))</code></pre>
 <p>Use the built-in dataset <code>Guyer</code> in <code>car</code> package here. We can always check each variables’ mode anytime:</p>
 <pre class="r"><code>data(Guyer, package = &quot;car&quot;)
 head(Guyer)  # first 20 values</code></pre>
-<pre><code>##   cooperation condition sex
-## 1          49         P   M
-## 2          64         P   M
-## 3          37         P   M
-## 4          52         P   M
-## 5          68         P   M
-## 6          54         P   F</code></pre>
+<pre><code>&gt;   cooperation condition sex
+&gt; 1          49         P   M
+&gt; 2          64         P   M
+&gt; 3          37         P   M
+&gt; 4          52         P   M
+&gt; 5          68         P   M
+&gt; 6          54         P   F</code></pre>
 <pre class="r"><code>Guyer$condition</code></pre>
-<pre><code>##  [1] P P P P P P P P P P A A A A A A A A A A
-## Levels: A P</code></pre>
+<pre><code>&gt;  [1] P P P P P P P P P P A A A A A A A A A A
+&gt; Levels: A P</code></pre>
 <pre class="r"><code>is.character(Guyer$condition)</code></pre>
-<pre><code>## [1] FALSE</code></pre>
+<pre><code>&gt; [1] FALSE</code></pre>
 <pre class="r"><code>is.factor(Guyer$condition)</code></pre>
-<pre><code>## [1] TRUE</code></pre>
+<pre><code>&gt; [1] TRUE</code></pre>
 <pre class="r"><code>summary(Guyer)</code></pre>
-<pre><code>##   cooperation    condition sex   
-##  Min.   :27.00   A:10      F:10  
-##  1st Qu.:38.50   P:10      M:10  
-##  Median :46.50                   
-##  Mean   :48.30                   
-##  3rd Qu.:58.75                   
-##  Max.   :79.00</code></pre>
+<pre><code>&gt;   cooperation    condition sex   
+&gt;  Min.   :27.00   A:10      F:10  
+&gt;  1st Qu.:38.50   P:10      M:10  
+&gt;  Median :46.50                   
+&gt;  Mean   :48.30                   
+&gt;  3rd Qu.:58.75                   
+&gt;  Max.   :79.00</code></pre>
 <p><br></p>
 </div>
 <div id="modifying-and-transforming-data" class="section level3">
@@ -440,26 +440,26 @@ head(Guyer)  # first 20 values</code></pre>
 <h4>1. Create new variabe based on other variables</h4>
 <pre class="r"><code>Guyer$perc.coop &lt;- 100 * Guyer$cooperation/120
 head(Guyer)  # first 6 rows</code></pre>
-<pre><code>##   cooperation condition sex perc.coop
-## 1          49         P   M  40.83333
-## 2          64         P   M  53.33333
-## 3          37         P   M  30.83333
-## 4          52         P   M  43.33333
-## 5          68         P   M  56.66667
-## 6          54         P   F  45.00000</code></pre>
+<pre><code>&gt;   cooperation condition sex perc.coop
+&gt; 1          49         P   M  40.83333
+&gt; 2          64         P   M  53.33333
+&gt; 3          37         P   M  30.83333
+&gt; 4          52         P   M  43.33333
+&gt; 5          68         P   M  56.66667
+&gt; 6          54         P   F  45.00000</code></pre>
 <p><br></p>
 </div>
 <div id="replace-the-original-variables-with-a-new-variable" class="section level4">
 <h4>2. Replace the original variables with a new variable</h4>
 <pre class="r"><code>Guyer$cooperation &lt;- with(Guyer, log(perc.coop/(100 - perc.coop)))
 head(Guyer)  # first 6 rows</code></pre>
-<pre><code>##   cooperation condition sex perc.coop
-## 1  -0.3708596         P   M  40.83333
-## 2   0.1335314         P   M  53.33333
-## 3  -0.8079227         P   M  30.83333
-## 4  -0.2682640         P   M  43.33333
-## 5   0.2682640         P   M  56.66667
-## 6  -0.2006707         P   F  45.00000</code></pre>
+<pre><code>&gt;   cooperation condition sex perc.coop
+&gt; 1  -0.3708596         P   M  40.83333
+&gt; 2   0.1335314         P   M  53.33333
+&gt; 3  -0.8079227         P   M  30.83333
+&gt; 4  -0.2682640         P   M  43.33333
+&gt; 5   0.2682640         P   M  56.66667
+&gt; 6  -0.2006707         P   F  45.00000</code></pre>
 <p><br></p>
 </div>
 <div id="transform---create-and-modify-several-variables-at-once" class="section level4">
@@ -474,41 +474,41 @@ head(Guyer)  # first 6 rows</code></pre>
 <pre class="r"><code># Divide perc.coop into 4 bins
 Guyer$coop.4 &lt;- cut(Guyer$perc.coop, 4)
 summary(Guyer$coop.4)</code></pre>
-<pre><code>## (22.5,33.3] (33.3,44.2]   (44.2,55]   (55,65.9] 
-##           6           7           5           2</code></pre>
+<pre><code>&gt; (22.5,33.3] (33.3,44.2]   (44.2,55]   (55,65.9] 
+&gt;           6           7           5           2</code></pre>
 <pre class="r"><code># Divide Guyer into 3 bins based on perc.coop and relabel
 Guyer$coop.groups &lt;- with(Guyer, cut(perc.coop, quantile(perc.coop, c(0, 1/3, 
     2/3, 1)), include.lowest = TRUE, labels = c(&quot;low&quot;, &quot;med&quot;, &quot;high&quot;)))
 summary(Guyer$coop.groups)</code></pre>
-<pre><code>##  low  med high 
-##    7    6    7</code></pre>
+<pre><code>&gt;  low  med high 
+&gt;    7    6    7</code></pre>
 <pre class="r"><code>summary(Guyer)</code></pre>
-<pre><code>##   cooperation       condition sex      perc.coop             coop.4 
-##  Min.   :-1.23676   A:10      F:10   Min.   :22.50   (22.5,33.3]:6  
-##  1st Qu.:-0.75015   P:10      M:10   1st Qu.:32.08   (33.3,44.2]:7  
-##  Median :-0.45870                    Median :38.75   (44.2,55]  :5  
-##  Mean   :-0.41690                    Mean   :40.25   (55,65.9]  :2  
-##  3rd Qu.:-0.04168                    3rd Qu.:48.96                  
-##  Max.   : 0.65588                    Max.   :65.83                  
-##  coop.groups
-##  low :7     
-##  med :6     
-##  high:7     
-##             
-##             
-## </code></pre>
+<pre><code>&gt;   cooperation       condition sex      perc.coop             coop.4 
+&gt;  Min.   :-1.23676   A:10      F:10   Min.   :22.50   (22.5,33.3]:6  
+&gt;  1st Qu.:-0.75015   P:10      M:10   1st Qu.:32.08   (33.3,44.2]:7  
+&gt;  Median :-0.45870                    Median :38.75   (44.2,55]  :5  
+&gt;  Mean   :-0.41690                    Mean   :40.25   (55,65.9]  :2  
+&gt;  3rd Qu.:-0.04168                    3rd Qu.:48.96                  
+&gt;  Max.   : 0.65588                    Max.   :65.83                  
+&gt;  coop.groups
+&gt;  low :7     
+&gt;  med :6     
+&gt;  high:7     
+&gt;             
+&gt;             
+&gt; </code></pre>
 <p><code>quantile()</code>: to locate the cut points.</p>
 <p><br></p>
 <p><strong>(2) <code>recode()</code> function in <code>car</code> package</strong></p>
 <pre class="r"><code>library(car)</code></pre>
-<pre><code>## 
-## Attaching package: 'car'</code></pre>
-<pre><code>## The following object is masked _by_ '.GlobalEnv':
-## 
-##     Guyer</code></pre>
+<pre><code>&gt; 
+&gt; Attaching package: 'car'</code></pre>
+<pre><code>&gt; The following object is masked _by_ '.GlobalEnv':
+&gt; 
+&gt;     Guyer</code></pre>
 <pre class="r"><code>Guyer$coop.2 &lt;- recode(Guyer$perc.coop, &quot;lo:50=1; 50:hi=2&quot;)
 Guyer$coop.2</code></pre>
-<pre><code>##  [1] 1 2 1 1 2 1 2 2 2 1 1 1 1 1 1 1 1 1 1 1</code></pre>
+<pre><code>&gt;  [1] 1 2 1 1 2 1 2 2 2 1 1 1 1 1 1 1 1 1 1 1</code></pre>
 <p><br></p>
 <p><strong>(3) <code>ifelse()</code> statements</strong></p>
 <p>Which will be covered later in chapter 8.</p>
@@ -533,33 +533,33 @@ dim(A)</code></pre>
 <pre class="r"><code>B &lt;- matrix(c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;), 4, 3, byrow = TRUE)  # 4 rows, 3 columns
 B
 dim(B)</code></pre>
-<pre><code>##      [,1] [,2] [,3]
-## [1,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [2,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [3,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [4,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot;</code></pre>
-<pre><code>## [1] 4 3</code></pre>
+<pre><code>&gt;      [,1] [,2] [,3]
+&gt; [1,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [2,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [3,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [4,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot;</code></pre>
+<pre><code>&gt; [1] 4 3</code></pre>
 <p><code>dim()</code>: dimension attribute with two elements: the number of rows and the number of columns</p>
 <pre class="r"><code>v &lt;- sample(5:50, 10)  # sample 10 numbers from 5 to 50
 v
 length(v)
 dim(v)</code></pre>
-<pre><code>##  [1] 10  6 32 17 29 25 12 28 49 19</code></pre>
-<pre><code>## [1] 10</code></pre>
-<pre><code>## NULL</code></pre>
+<pre><code>&gt;  [1] 33 32 22 30 13 28 39 41 37  6</code></pre>
+<pre><code>&gt; [1] 10</code></pre>
+<pre><code>&gt; NULL</code></pre>
 <p><code>length()</code>: length of the vector; A vector has <code>length</code> attribute but not a <code>dim</code> attribute.</p>
 <pre class="r"><code>as.matrix(v)</code></pre>
-<pre><code>##       [,1]
-##  [1,]   10
-##  [2,]    6
-##  [3,]   32
-##  [4,]   17
-##  [5,]   29
-##  [6,]   25
-##  [7,]   12
-##  [8,]   28
-##  [9,]   49
-## [10,]   19</code></pre>
+<pre><code>&gt;       [,1]
+&gt;  [1,]   33
+&gt;  [2,]   32
+&gt;  [3,]   22
+&gt;  [4,]   30
+&gt;  [5,]   13
+&gt;  [6,]   28
+&gt;  [7,]   39
+&gt;  [8,]   41
+&gt;  [9,]   37
+&gt; [10,]    6</code></pre>
 <p>R usually treats vectors differently than matrices. You can turn a vector into a one-column matrix using <code>as.matrix</code> function.</p>
 <p><br></p>
 </div>
@@ -568,21 +568,21 @@ dim(v)</code></pre>
 <p>Higher-dimensional arrays of homogeneous elements are encountered much less frequently than matrices.</p>
 <pre class="r"><code>array.3 &lt;- array(1:24, dim = c(4, 3, 2))  # 4 rows, 3 columns, 2 layers
 array.3</code></pre>
-<pre><code>## , , 1
-## 
-##      [,1] [,2] [,3]
-## [1,]    1    5    9
-## [2,]    2    6   10
-## [3,]    3    7   11
-## [4,]    4    8   12
-## 
-## , , 2
-## 
-##      [,1] [,2] [,3]
-## [1,]   13   17   21
-## [2,]   14   18   22
-## [3,]   15   19   23
-## [4,]   16   20   24</code></pre>
+<pre><code>&gt; , , 1
+&gt; 
+&gt;      [,1] [,2] [,3]
+&gt; [1,]    1    5    9
+&gt; [2,]    2    6   10
+&gt; [3,]    3    7   11
+&gt; [4,]    4    8   12
+&gt; 
+&gt; , , 2
+&gt; 
+&gt;      [,1] [,2] [,3]
+&gt; [1,]   13   17   21
+&gt; [2,]   14   18   22
+&gt; [3,]   15   19   23
+&gt; [4,]   16   20   24</code></pre>
 <p><br></p>
 </div>
 <div id="lists" class="section level3">
@@ -590,21 +590,21 @@ array.3</code></pre>
 <p>Lists are data structures composed of potentially heterogeneous elements. The elements of a list may be complex data structures, including other lists. Because a list can contain other lists as elements, each of which can also contain lists, lists are recursive structures.</p>
 <pre class="r"><code>list.1 &lt;- list(mat.1 = A, mat.2 = B, vec = v)  # a 3-item list
 list.1</code></pre>
-<pre><code>## $mat.1
-##      [,1] [,2] [,3] [,4]
-## [1,]    1    4    7   10
-## [2,]    2    5    8   11
-## [3,]    3    6    9   12
-## 
-## $mat.2
-##      [,1] [,2] [,3]
-## [1,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [2,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [3,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [4,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## 
-## $vec
-##  [1] 10  6 32 17 29 25 12 28 49 19</code></pre>
+<pre><code>&gt; $mat.1
+&gt;      [,1] [,2] [,3] [,4]
+&gt; [1,]    1    4    7   10
+&gt; [2,]    2    5    8   11
+&gt; [3,]    3    6    9   12
+&gt; 
+&gt; $mat.2
+&gt;      [,1] [,2] [,3]
+&gt; [1,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [2,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [3,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [4,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; 
+&gt; $vec
+&gt;  [1] 33 32 22 30 13 28 39 41 37  6</code></pre>
 <p>This list contains a numeric matrix, a character matrix, and a numeric vector.</p>
 <p><br></p>
 </div>
@@ -615,166 +615,166 @@ list.1</code></pre>
 <h4>1. Indexing Vectors</h4>
 <p>A vector can be indexed by a single number or by a vector of numbers.</p>
 <pre class="r"><code>v</code></pre>
-<pre><code>##  [1] 10  6 32 17 29 25 12 28 49 19</code></pre>
+<pre><code>&gt;  [1] 33 32 22 30 13 28 39 41 37  6</code></pre>
 <pre class="r"><code>v[2]</code></pre>
-<pre><code>## [1] 6</code></pre>
+<pre><code>&gt; [1] 32</code></pre>
 <pre class="r"><code>v[c(4, 2, 6)]</code></pre>
-<pre><code>## [1] 17  6 25</code></pre>
+<pre><code>&gt; [1] 30 32 28</code></pre>
 <pre class="r"><code>v[c(4, 2, 4)]</code></pre>
-<pre><code>## [1] 17  6 17</code></pre>
+<pre><code>&gt; [1] 30 32 30</code></pre>
 <p><br></p>
 <p>Negative indices suppresses the corresponding elements of the vector.</p>
 <pre class="r"><code>v[-c(2, 4, 6, 8, 10)]</code></pre>
-<pre><code>## [1] 10 32 29 12 49</code></pre>
+<pre><code>&gt; [1] 33 22 13 39 37</code></pre>
 <p><br></p>
 <p>If a vector has a names attribute, then we can also index the elements by their names.</p>
 <pre class="r"><code>names(v) &lt;- letters[1:10]
 v</code></pre>
-<pre><code>##  a  b  c  d  e  f  g  h  i  j 
-## 10  6 32 17 29 25 12 28 49 19</code></pre>
+<pre><code>&gt;  a  b  c  d  e  f  g  h  i  j 
+&gt; 33 32 22 30 13 28 39 41 37  6</code></pre>
 <pre class="r"><code>v[c(&quot;f&quot;, &quot;i&quot;, &quot;g&quot;)]</code></pre>
-<pre><code>##  f  i  g 
-## 25 49 12</code></pre>
+<pre><code>&gt;  f  i  g 
+&gt; 28 37 39</code></pre>
 <p><br></p>
 <p>A vector can be indexed by a logical vector.</p>
 <pre class="r"><code>v &lt; 6</code></pre>
-<pre><code>##     a     b     c     d     e     f     g     h     i     j 
-## FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
+<pre><code>&gt;     a     b     c     d     e     f     g     h     i     j 
+&gt; FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
 <pre class="r"><code>v[v &lt; 6]</code></pre>
-<pre><code>## named integer(0)</code></pre>
+<pre><code>&gt; named integer(0)</code></pre>
 <pre class="r"><code># make a copy of v
 vv &lt;- v
 vv[c(1, 3, 5)] &lt;- 1:3
 vv</code></pre>
-<pre><code>##  a  b  c  d  e  f  g  h  i  j 
-##  1  6  2 17  3 25 12 28 49 19</code></pre>
+<pre><code>&gt;  a  b  c  d  e  f  g  h  i  j 
+&gt;  1 32  2 30  3 28 39 41 37  6</code></pre>
 <pre class="r"><code>vv[c(&quot;b&quot;, &quot;d&quot;, &quot;f&quot;, &quot;h&quot;, &quot;j&quot;)] &lt;- NA
 vv</code></pre>
-<pre><code>##  a  b  c  d  e  f  g  h  i  j 
-##  1 NA  2 NA  3 NA 12 NA 49 NA</code></pre>
+<pre><code>&gt;  a  b  c  d  e  f  g  h  i  j 
+&gt;  1 NA  2 NA  3 NA 39 NA 37 NA</code></pre>
 <p><br></p>
 </div>
 <div id="indexing-matrices-and-arrays" class="section level4">
 <h4>2. Indexing Matrices and Arrays</h4>
 <p>Indexing extends to matrices and to arrays. Indices corresponding to the different dimensions of an array are separated by commas.</p>
 <pre class="r"><code>A</code></pre>
-<pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]    1    4    7   10
-## [2,]    2    5    8   11
-## [3,]    3    6    9   12</code></pre>
+<pre><code>&gt;      [,1] [,2] [,3] [,4]
+&gt; [1,]    1    4    7   10
+&gt; [2,]    2    5    8   11
+&gt; [3,]    3    6    9   12</code></pre>
 <pre class="r"><code>A[2, 3]</code></pre>
-<pre><code>## [1] 8</code></pre>
+<pre><code>&gt; [1] 8</code></pre>
 <pre class="r"><code>A[c(1, 2), 2]  # rows 1 and 2, column 2</code></pre>
-<pre><code>## [1] 4 5</code></pre>
+<pre><code>&gt; [1] 4 5</code></pre>
 <pre class="r"><code>A[c(1, 2), c(2, 3)]  # rows 1 and 2, columns 2 and 3</code></pre>
-<pre><code>##      [,1] [,2]
-## [1,]    4    7
-## [2,]    5    8</code></pre>
+<pre><code>&gt;      [,1] [,2]
+&gt; [1,]    4    7
+&gt; [2,]    5    8</code></pre>
 <pre class="r"><code>A[c(1, 2), ]  # rows 1 and 2, all columns</code></pre>
-<pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]    1    4    7   10
-## [2,]    2    5    8   11</code></pre>
+<pre><code>&gt;      [,1] [,2] [,3] [,4]
+&gt; [1,]    1    4    7   10
+&gt; [2,]    2    5    8   11</code></pre>
 <p><br></p>
 <p>If we select elements in a single row or single column of a matrix, then R will automatically result in a vector but not a matrix with single row or column. Use <code>drop = FALSE</code> to fix this problem.</p>
 <pre class="r"><code>A[, 1]</code></pre>
-<pre><code>## [1] 1 2 3</code></pre>
+<pre><code>&gt; [1] 1 2 3</code></pre>
 <pre class="r"><code>A[, 1, drop = FALSE]</code></pre>
-<pre><code>##      [,1]
-## [1,]    1
-## [2,]    2
-## [3,]    3</code></pre>
+<pre><code>&gt;      [,1]
+&gt; [1,]    1
+&gt; [2,]    2
+&gt; [3,]    3</code></pre>
 <p><br></p>
 <p>Negative indices will remove the specified rows or columns. You can still use logical vector to be your indices.</p>
 <pre class="r"><code>A[, -c(1, 3)]  # omit columns 1 and 3</code></pre>
-<pre><code>##      [,1] [,2]
-## [1,]    4   10
-## [2,]    5   11
-## [3,]    6   12</code></pre>
+<pre><code>&gt;      [,1] [,2]
+&gt; [1,]    4   10
+&gt; [2,]    5   11
+&gt; [3,]    6   12</code></pre>
 <pre class="r"><code>A[-1, -2]  # omit row 1 and column 2</code></pre>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    2    8   11
-## [2,]    3    9   12</code></pre>
+<pre><code>&gt;      [,1] [,2] [,3]
+&gt; [1,]    2    8   11
+&gt; [2,]    3    9   12</code></pre>
 <pre class="r"><code>rownames(A) &lt;- c(&quot;one&quot;, &quot;two&quot;, &quot;three&quot;)  # set row names
 colnames(A) &lt;- c(&quot;w&quot;, &quot;x&quot;, &quot;y&quot;, &quot;z&quot;)  # set column names
 A</code></pre>
-<pre><code>##       w x y  z
-## one   1 4 7 10
-## two   2 5 8 11
-## three 3 6 9 12</code></pre>
+<pre><code>&gt;       w x y  z
+&gt; one   1 4 7 10
+&gt; two   2 5 8 11
+&gt; three 3 6 9 12</code></pre>
 <pre class="r"><code>A[c(&quot;one&quot;, &quot;two&quot;), c(&quot;x&quot;, &quot;y&quot;)]</code></pre>
-<pre><code>##     x y
-## one 4 7
-## two 5 8</code></pre>
+<pre><code>&gt;     x y
+&gt; one 4 7
+&gt; two 5 8</code></pre>
 <pre class="r"><code>A[c(TRUE, FALSE, TRUE), ]</code></pre>
-<pre><code>##       w x y  z
-## one   1 4 7 10
-## three 3 6 9 12</code></pre>
+<pre><code>&gt;       w x y  z
+&gt; one   1 4 7 10
+&gt; three 3 6 9 12</code></pre>
 <p><br></p>
 </div>
 <div id="indexing-lists" class="section level4">
 <h4>3. Indexing Lists</h4>
 <p>Similar as indexing vectors.</p>
 <pre class="r"><code>list.1</code></pre>
-<pre><code>## $mat.1
-##      [,1] [,2] [,3] [,4]
-## [1,]    1    4    7   10
-## [2,]    2    5    8   11
-## [3,]    3    6    9   12
-## 
-## $mat.2
-##      [,1] [,2] [,3]
-## [1,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [2,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [3,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [4,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## 
-## $vec
-##  [1] 10  6 32 17 29 25 12 28 49 19</code></pre>
+<pre><code>&gt; $mat.1
+&gt;      [,1] [,2] [,3] [,4]
+&gt; [1,]    1    4    7   10
+&gt; [2,]    2    5    8   11
+&gt; [3,]    3    6    9   12
+&gt; 
+&gt; $mat.2
+&gt;      [,1] [,2] [,3]
+&gt; [1,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [2,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [3,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [4,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; 
+&gt; $vec
+&gt;  [1] 33 32 22 30 13 28 39 41 37  6</code></pre>
 <pre class="r"><code>list.1[c(2, 3)]  # elements 2 and 3</code></pre>
-<pre><code>## $mat.2
-##      [,1] [,2] [,3]
-## [1,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [2,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [3,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [4,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## 
-## $vec
-##  [1] 10  6 32 17 29 25 12 28 49 19</code></pre>
+<pre><code>&gt; $mat.2
+&gt;      [,1] [,2] [,3]
+&gt; [1,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [2,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [3,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [4,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; 
+&gt; $vec
+&gt;  [1] 33 32 22 30 13 28 39 41 37  6</code></pre>
 <pre class="r"><code>list.1[2]  # return a one-element list</code></pre>
-<pre><code>## $mat.2
-##      [,1] [,2] [,3]
-## [1,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [2,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [3,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [4,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot;</code></pre>
+<pre><code>&gt; $mat.2
+&gt;      [,1] [,2] [,3]
+&gt; [1,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [2,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [3,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [4,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot;</code></pre>
 <pre class="r"><code>list.1[[2]]  # return a matrix</code></pre>
-<pre><code>##      [,1] [,2] [,3]
-## [1,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [2,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [3,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
-## [4,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot;</code></pre>
+<pre><code>&gt;      [,1] [,2] [,3]
+&gt; [1,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [2,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [3,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot; 
+&gt; [4,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot;</code></pre>
 <p><br></p>
 <p>Double-bracket <code>[[]]</code> extracts a single-element list</p>
 <pre class="r"><code># produces a one-element list
 list.1[&quot;mat.1&quot;]</code></pre>
-<pre><code>## $mat.1
-##      [,1] [,2] [,3] [,4]
-## [1,]    1    4    7   10
-## [2,]    2    5    8   11
-## [3,]    3    6    9   12</code></pre>
+<pre><code>&gt; $mat.1
+&gt;      [,1] [,2] [,3] [,4]
+&gt; [1,]    1    4    7   10
+&gt; [2,]    2    5    8   11
+&gt; [3,]    3    6    9   12</code></pre>
 <pre class="r"><code># extracts a single element
 list.1[[&quot;mat.1&quot;]]</code></pre>
-<pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]    1    4    7   10
-## [2,]    2    5    8   11
-## [3,]    3    6    9   12</code></pre>
+<pre><code>&gt;      [,1] [,2] [,3] [,4]
+&gt; [1,]    1    4    7   10
+&gt; [2,]    2    5    8   11
+&gt; [3,]    3    6    9   12</code></pre>
 <p><br></p>
 <p>You can also extract elements by <code>$</code>.</p>
 <pre class="r"><code>list.1$mat.1</code></pre>
-<pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]    1    4    7   10
-## [2,]    2    5    8   11
-## [3,]    3    6    9   12</code></pre>
+<pre><code>&gt;      [,1] [,2] [,3] [,4]
+&gt; [1,]    1    4    7   10
+&gt; [2,]    2    5    8   11
+&gt; [3,]    3    6    9   12</code></pre>
 <p><br></p>
 <p>You can replace list elements, define new elements, delete an element:</p>
 <pre class="r"><code># replace element
@@ -785,65 +785,93 @@ list.1$title &lt;- &quot;an arbitrary list&quot;
 list.1$mat.2 &lt;- NULL
 
 list.1</code></pre>
-<pre><code>## $mat.1
-##      [,1] [,2]
-## [1,]    1    1
-## [2,]    1    1
-## 
-## $vec
-##  [1] 10  6 32 17 29 25 12 28 49 19
-## 
-## $title
-## [1] &quot;an arbitrary list&quot;</code></pre>
+<pre><code>&gt; $mat.1
+&gt;      [,1] [,2]
+&gt; [1,]    1    1
+&gt; [2,]    1    1
+&gt; 
+&gt; $vec
+&gt;  [1] 33 32 22 30 13 28 39 41 37  6
+&gt; 
+&gt; $title
+&gt; [1] &quot;an arbitrary list&quot;</code></pre>
 <p><br></p>
 </div>
 <div id="indexing-data-frames" class="section level4">
 <h4>4. Indexing Data Frames</h4>
 <pre class="r"><code>head(Guyer)  # first 6 rows</code></pre>
-<pre><code>##   cooperation condition sex perc.coop      coop.4 coop.groups coop.2
-## 1  -0.3708596         P   M  40.83333 (33.3,44.2]         med      1
-## 2   0.1335314         P   M  53.33333   (44.2,55]        high      2
-## 3  -0.8079227         P   M  30.83333 (22.5,33.3]         low      1
-## 4  -0.2682640         P   M  43.33333 (33.3,44.2]         med      1
-## 5   0.2682640         P   M  56.66667   (55,65.9]        high      2
-## 6  -0.2006707         P   F  45.00000   (44.2,55]        high      1</code></pre>
+<pre><code>&gt;   cooperation condition sex perc.coop      coop.4 coop.groups coop.2
+&gt; 1  -0.3708596         P   M  40.83333 (33.3,44.2]         med      1
+&gt; 2   0.1335314         P   M  53.33333   (44.2,55]        high      2
+&gt; 3  -0.8079227         P   M  30.83333 (22.5,33.3]         low      1
+&gt; 4  -0.2682640         P   M  43.33333 (33.3,44.2]         med      1
+&gt; 5   0.2682640         P   M  56.66667   (55,65.9]        high      2
+&gt; 6  -0.2006707         P   F  45.00000   (44.2,55]        high      1</code></pre>
 <pre class="r"><code># first column
 Guyer[, 1]</code></pre>
-<pre><code>##  [1] -0.37085958  0.13353139 -0.80792270 -0.26826399  0.26826399
-##  [6] -0.20067070  0.03333642  0.65587579  0.13353139 -1.14356368
-## [11] -1.23676263 -0.06669137 -0.26826399 -0.65587579 -1.09861229
-## [16] -0.69314718 -0.73088751 -0.54654371 -0.92798677 -0.54654371</code></pre>
+<pre><code>&gt;  [1] -0.37085958  0.13353139 -0.80792270 -0.26826399  0.26826399
+&gt;  [6] -0.20067070  0.03333642  0.65587579  0.13353139 -1.14356368
+&gt; [11] -1.23676263 -0.06669137 -0.26826399 -0.65587579 -1.09861229
+&gt; [16] -0.69314718 -0.73088751 -0.54654371 -0.92798677 -0.54654371</code></pre>
 <pre class="r"><code># 'cooperation' column = first column
 Guyer[, &quot;cooperation&quot;]</code></pre>
-<pre><code>##  [1] -0.37085958  0.13353139 -0.80792270 -0.26826399  0.26826399
-##  [6] -0.20067070  0.03333642  0.65587579  0.13353139 -1.14356368
-## [11] -1.23676263 -0.06669137 -0.26826399 -0.65587579 -1.09861229
-## [16] -0.69314718 -0.73088751 -0.54654371 -0.92798677 -0.54654371</code></pre>
+<pre><code>&gt;  [1] -0.37085958  0.13353139 -0.80792270 -0.26826399  0.26826399
+&gt;  [6] -0.20067070  0.03333642  0.65587579  0.13353139 -1.14356368
+&gt; [11] -1.23676263 -0.06669137 -0.26826399 -0.65587579 -1.09861229
+&gt; [16] -0.69314718 -0.73088751 -0.54654371 -0.92798677 -0.54654371</code></pre>
 <pre class="r"><code># rows 1 and 2
 Guyer[c(1, 2), ]</code></pre>
-<pre><code>##   cooperation condition sex perc.coop      coop.4 coop.groups coop.2
-## 1  -0.3708596         P   M  40.83333 (33.3,44.2]         med      1
-## 2   0.1335314         P   M  53.33333   (44.2,55]        high      2</code></pre>
+<pre><code>&gt;   cooperation condition sex perc.coop      coop.4 coop.groups coop.2
+&gt; 1  -0.3708596         P   M  40.83333 (33.3,44.2]         med      1
+&gt; 2   0.1335314         P   M  53.33333   (44.2,55]        high      2</code></pre>
 <pre class="r"><code># drop rows 6 through 20
 Guyer[-(6:20), ]</code></pre>
-<pre><code>##   cooperation condition sex perc.coop      coop.4 coop.groups coop.2
-## 1  -0.3708596         P   M  40.83333 (33.3,44.2]         med      1
-## 2   0.1335314         P   M  53.33333   (44.2,55]        high      2
-## 3  -0.8079227         P   M  30.83333 (22.5,33.3]         low      1
-## 4  -0.2682640         P   M  43.33333 (33.3,44.2]         med      1
-## 5   0.2682640         P   M  56.66667   (55,65.9]        high      2</code></pre>
+<pre><code>&gt;   cooperation condition sex perc.coop      coop.4 coop.groups coop.2
+&gt; 1  -0.3708596         P   M  40.83333 (33.3,44.2]         med      1
+&gt; 2   0.1335314         P   M  53.33333   (44.2,55]        high      2
+&gt; 3  -0.8079227         P   M  30.83333 (22.5,33.3]         low      1
+&gt; 4  -0.2682640         P   M  43.33333 (33.3,44.2]         med      1
+&gt; 5   0.2682640         P   M  56.66667   (55,65.9]        high      2</code></pre>
 <p><br></p>
 <p>Make it more complicated: select those rows with column <code>sex</code> are <code>female</code> and column <code>condition</code> are <code>public</code>.</p>
+<pre class="r"><code>Guyer</code></pre>
+<pre><code>&gt;    cooperation condition sex perc.coop      coop.4 coop.groups coop.2
+&gt; 1  -0.37085958         P   M  40.83333 (33.3,44.2]         med      1
+&gt; 2   0.13353139         P   M  53.33333   (44.2,55]        high      2
+&gt; 3  -0.80792270         P   M  30.83333 (22.5,33.3]         low      1
+&gt; 4  -0.26826399         P   M  43.33333 (33.3,44.2]         med      1
+&gt; 5   0.26826399         P   M  56.66667   (55,65.9]        high      2
+&gt; 6  -0.20067070         P   F  45.00000   (44.2,55]        high      1
+&gt; 7   0.03333642         P   F  50.83333   (44.2,55]        high      2
+&gt; 8   0.65587579         P   F  65.83333   (55,65.9]        high      2
+&gt; 9   0.13353139         P   F  53.33333   (44.2,55]        high      2
+&gt; 10 -1.14356368         P   F  24.16667 (22.5,33.3]         low      1
+&gt; 11 -1.23676263         A   M  22.50000 (22.5,33.3]         low      1
+&gt; 12 -0.06669137         A   M  48.33333   (44.2,55]        high      1
+&gt; 13 -0.26826399         A   M  43.33333 (33.3,44.2]         med      1
+&gt; 14 -0.65587579         A   M  34.16667 (33.3,44.2]         med      1
+&gt; 15 -1.09861229         A   M  25.00000 (22.5,33.3]         low      1
+&gt; 16 -0.69314718         A   F  33.33333 (33.3,44.2]         low      1
+&gt; 17 -0.73088751         A   F  32.50000 (22.5,33.3]         low      1
+&gt; 18 -0.54654371         A   F  36.66667 (33.3,44.2]         med      1
+&gt; 19 -0.92798677         A   F  28.33333 (22.5,33.3]         low      1
+&gt; 20 -0.54654371         A   F  36.66667 (33.3,44.2]         med      1</code></pre>
 <pre class="r"><code># with function
-with(Guyer, Guyer[sex == &quot;female&quot; &amp; condition == &quot;public&quot;, ])</code></pre>
-<pre><code>## [1] cooperation condition   sex         perc.coop   coop.4      coop.groups
-## [7] coop.2     
-## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
+with(Guyer, Guyer[sex == &quot;F&quot; &amp; condition == &quot;P&quot;, ])</code></pre>
+<pre><code>&gt;    cooperation condition sex perc.coop      coop.4 coop.groups coop.2
+&gt; 6  -0.20067070         P   F  45.00000   (44.2,55]        high      1
+&gt; 7   0.03333642         P   F  50.83333   (44.2,55]        high      2
+&gt; 8   0.65587579         P   F  65.83333   (55,65.9]        high      2
+&gt; 9   0.13353139         P   F  53.33333   (44.2,55]        high      2
+&gt; 10 -1.14356368         P   F  24.16667 (22.5,33.3]         low      1</code></pre>
 <pre class="r"><code># subset function
-subset(Guyer, sex == &quot;female&quot; &amp; condition == &quot;public&quot;)</code></pre>
-<pre><code>## [1] cooperation condition   sex         perc.coop   coop.4      coop.groups
-## [7] coop.2     
-## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
+subset(Guyer, sex == &quot;F&quot; &amp; condition == &quot;P&quot;)</code></pre>
+<pre><code>&gt;    cooperation condition sex perc.coop      coop.4 coop.groups coop.2
+&gt; 6  -0.20067070         P   F  45.00000   (44.2,55]        high      1
+&gt; 7   0.03333642         P   F  50.83333   (44.2,55]        high      2
+&gt; 8   0.65587579         P   F  65.83333   (55,65.9]        high      2
+&gt; 9   0.13353139         P   F  53.33333   (44.2,55]        high      2
+&gt; 10 -1.14356368         P   F  24.16667 (22.5,33.3]         low      1</code></pre>
 <p><br></p>
 </div>
 </div>

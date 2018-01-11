@@ -1,0 +1,22 @@
+This file contains information on all the presidents from 1961 - 2009
+information
+width 17 presidents full name
+width 8  term start date
+width 8  term end date
+width 4  total days in office
+
+
+
+John F. Kennedy  01/20/6111/22/631036 
+Lyndon B. Johnson11/22/6301/20/691886
+Richard Nixon    01/20/6908/09/742027
+Gerald Ford      08/09/7401/20/77 895 
+Jimmy Carter     01/20/7701/20/811461
+Ronald Regan     01/20/8101/20/892922
+George W. Bush   01/20/8901/20/932922
+William Clinton  01/20/9301/20/012922
+George H.W. Bush 01/20/0101/20/092922
+
+
+
+
